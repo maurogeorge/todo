@@ -270,16 +270,17 @@ label[for='toggle-all'] {
 	transition: all 0.2s;
 }
 
+
+#todo-list li a.destroy {
+  text-decoration: none;
+}
+
 #todo-list li .destroy:hover {
 	text-shadow: 0 0 1px #000,
 				 0 0 10px rgba(199, 107, 107, 0.8);
 	-webkit-transform: scale(1.3);
 	-ms-transform: scale(1.3);
 	transform: scale(1.3);
-}
-
-#todo-list li .destroy:after {
-	content: 'âœ–';
 }
 
 #todo-list li:hover .destroy {

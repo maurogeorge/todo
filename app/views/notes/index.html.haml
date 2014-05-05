@@ -8,9 +8,10 @@
       - if @notes.any?
         - @notes.each do |note|
           %li
-            .view
-              %label
-                = note.content
+            %label
+              = note.content
+            = link_to 'x', nil, class: 'destroy'
+
   %footer#footer
     %span#todo-count
       Total de notas:
