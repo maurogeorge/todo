@@ -16,6 +16,10 @@ describe NotesController do
     it { should render_template(:index) }
     it { should render_with_layout(:application) }
 
+    it 'assigns @note with a new one' do
+      expect(assigns(:note)).to be_a_new(Note)
+    end
+
     it 'assigns all notes' do
       expect(assigns(:notes)).to include(note)
     end

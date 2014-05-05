@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
 
   def index
+    @note = Note.new
     fetch_notes
   end
 
