@@ -6,7 +6,7 @@ It is a simple app of todo list, the design is the same of [TodoMVC](http://todo
 
 ## How to run this project?
 
-1. ```git clone REPO_URL```
+1. ```git clone git@github.com:maurogeorge/todo.git```
 2. ```cd todo```
 3. ```bundle```
 4. ```rake db:setup```
