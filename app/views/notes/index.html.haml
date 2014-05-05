@@ -10,7 +10,7 @@
           %li
             %label
               = note.content
-            = link_to 'x', nil, class: 'destroy'
+            = link_to 'x', note_path(note), class: 'destroy', method: :delete
 
   %footer#footer
     %span#todo-count
