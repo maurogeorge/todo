@@ -89,4 +89,39 @@ describe NotesController do
       end
     end
   end
+
+  describe "DELETE 'destroy'" do
+
+    context 'with a valid param' do
+
+      let!(:note) do
+        create(:note)
+      end
+
+      it 'destroys the note' do
+        expect do
+          delete :destroy, id: note
+        end.to change(Note, :count).by(-1)
+      end
+
+      it 'redirects to root path' do
+        delete :destroy, id: note
+        should redirect_to(root_path)
+      end
+
+      it 'sets the flash correctly' do
+        delete :destroy, id: note
+        should set_the_flash[:notice].to(/sucesso/)
+      end
+    end
+
+    context 'with an invalid param' do
+
+      it 'raises error' do
+        expect do
+          delete :destroy, id: 'wrong'
+        end.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
 end

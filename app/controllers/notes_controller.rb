@@ -15,6 +15,12 @@ class NotesController < ApplicationController
     end
   end
 
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to root_path, notice: 'Nota deletada com sucesso!'
+  end
+
   private
 
     def notes_params
