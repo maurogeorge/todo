@@ -1,0 +1,15 @@
+%section#todoapp
+  %header#header
+    %h1 Minhas notas
+    %input#new-todo{autofocus: "", placeholder: "What needs to be done?"}/
+  %section#main
+    %ul#todo-list
+      - @notes.each do |note|
+        %li
+          .view
+            %label
+              = note.content
+  %footer#footer
+    %span#todo-count
+      Total de notas:
+      = @notes.size
