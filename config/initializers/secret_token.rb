@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Todo::Application.config.secret_key_base = '82bd73ec3df60fd6b04c3e49805b92ccaa6685d593841e1960854fc8c84f1b77165c00d6ac7d9ecc0cbaae81a116bd8fd3bb300230b12eaf5988aaa8c671efbd'
+Todo::Application.config.secret_key_base = ENV['SECRET_TOKEN']
