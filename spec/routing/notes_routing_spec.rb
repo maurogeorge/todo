@@ -11,6 +11,10 @@ describe NotesController do
     it 'routes to notes#create' do
       expect(post('/notes')).to route_to('notes#create')
     end
+
+    it 'routes to notes#destroy' do
+      expect(delete('/notes/1')).to route_to('notes#destroy', id: '1')
+    end
   end
 
   describe 'route helpers' do
@@ -21,6 +25,10 @@ describe NotesController do
 
     it 'notes_path' do
       expect(notes_path).to eq('/notes')
+    end
+
+    it 'note_path' do
+      expect(note_path(1)).to eq('/notes/1')
     end
   end
 end

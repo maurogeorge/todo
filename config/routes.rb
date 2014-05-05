@@ -2,7 +2,7 @@ Todo::Application.routes.draw do
 
   root to: 'notes#index'
 
-  resources :notes, only: [:create]
+  resources :notes, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
