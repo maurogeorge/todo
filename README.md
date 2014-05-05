@@ -1,5 +1,8 @@
-todo
+Todo
 =======
+
+Sample app used to show Ruby on Rails on a class at Unirio on 5/5/2014.
+It is a simple app of todo list, the design is the same of [TodoMVC](http://todomvc.com/).
 
 ## How to run this project?
 
